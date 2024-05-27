@@ -13,8 +13,8 @@
 <body id="home">
     <nav class="navbar">
         <h1 class="logo"><a href="#home">Hem Raj</a></h1>
-        <button class="menu" onclick="myFunction()">
-            <img width="36" src="./svg and pictures/menu.svg" alt="menu bar svg Picture">
+        <button href="javascript:void(0);" class="menu" onclick="menuFunction()">
+            <img width="34" src="./svg and pictures/menu.svg" alt="menu bar svg Picture">
         </button>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -343,26 +343,32 @@
         All &copy; right are resevered by Hemraj-7
     </footer>
     <script>
-        function myFunction() {
+        function menuFunction() {
             var x = document.querySelector("ul");
             var navbar = document.querySelector(".navbar");
+            var menuImg = document.querySelector(".menu>img");
+            var a = document.querySelectorAll('ul>li>a');
 
             if (x.style.display === "flex") {
                 x.style.display = "none";
+                menuImg.src = "./svg and pictures/menu.svg";
+
 
             } else {
                 x.style.display = "flex";
                 navbar.style.position = "relative";
                 x.style.gap = "50px";
                 x.style.flexDirection = "column"
-                console.log('noooh');
                 x.style.backgroundColor = "#1e90ff";
                 x.style.position = "absolute";
                 x.style.top = "49.5px";
                 x.style.right = 0;
-                x.style.padding = "50px 100px";
+                x.style.width = "100vw";
+                x.style.paddingTop = "30px";
+                x.style.paddingBottom = "50px";
                 x.style.textAlign = "center";
                 x.style.fontSize = "20px";
+                menuImg.src = "./svg and pictures/close.svg"
             }
         }
     </script>
